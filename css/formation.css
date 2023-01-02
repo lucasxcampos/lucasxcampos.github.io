@@ -1,0 +1,148 @@
+.formation {
+  background: #141414;
+  color: #ffffff;
+}
+
+.formation-container {
+  max-width: 1200px;
+  padding: 120px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+  position: relative;
+}
+
+.formation .subtitle {
+  color: #000000;
+  max-width: 5ch;
+}
+
+.formation-text {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  max-width: 40ch;
+  margin-bottom: 60px;
+  color: #a3a3a3;
+}
+
+.formation-text strong {
+  color: #ffffff;
+}
+
+.faculty-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.faculty {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(119, 111, 111, 0.25);
+  border-right: 1px solid rgba(105, 102, 102, 0.1);
+  border-bottom: 1px solid rgba(95, 89, 89, 0.1);
+  background: #000000;
+  padding: 20px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.faculty-type {
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  color: #a3a3a3;
+  margin-bottom: 10px;
+}
+
+.faculty-course {
+  flex: 1;
+  font-size: 1.125rem;
+  line-height: 1.4;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.faculty-course::before {
+  content: "";
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: linear-gradient(#b6f829, #67dd0a);
+  position: absolute;
+  top: -45px;
+  left: -20px;
+}
+
+.faculty-institution {
+  font-size: 1.125rem;
+  color: #a3a3a3;
+}
+
+.course {
+  margin-bottom: 60px;
+}
+
+.formation-extra h3 {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #8f8f8f;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.formation-extra h3::before {
+  display: block;
+  content: "";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: -36px;
+  top: -4px;
+}
+
+.course h3::before {
+  background: url("../images/cursos.svg") no-repeat center center;
+}
+
+.languages h3::before {
+  background: url("../images/idiomas.svg") no-repeat center center;
+}
+
+.formation-extra li {
+  font-size: 1.125rem;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.formation-extra span {
+  color: #8f8f8f;
+}
+
+.course li {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 800px) {
+  .formation-container {
+    grid-template-columns: 1fr;
+    padding: 60px 20px;
+    gap: 40px;
+  }
+  .formation .subtitle {
+    color: #ffffff;
+  }
+  .formation-text {
+    font-size: 1.25rem;
+  }
+  .formation-extra h3::before {
+    position: initial;
+    margin-bottom: 10px;
+  }
+}
