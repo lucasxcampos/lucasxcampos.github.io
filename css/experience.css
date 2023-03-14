@@ -1,0 +1,119 @@
+.experience {
+  max-width: 1200px;
+  padding: 40px 20px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 100px;
+}
+
+.experience .subtitle {
+  color: #e0e0e0;
+}
+
+.experience-text {
+  font-size: 1.5rem;
+  line-height: 1.33;
+  max-width: 40ch;
+  margin-bottom: 60px;
+  color: #525252;
+}
+
+.experience-text strong {
+  color: #141414;
+}
+
+.company {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 20px;
+  padding: 20px;
+  background: #f5f5f5;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.company::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: linear-gradient(#b6f829, #67dd0a);
+  position: absolute;
+}
+
+.company-year {
+  position: absolute;
+  top: 1px;
+  left: -100px;
+  width: 80px;
+  text-align: right;
+  color: #525252;
+  font-size: 0.875rem;
+}
+
+.company-title {
+  font-size: 1.125rem;
+  line-height: 1.1;
+  font-weight: bold;
+}
+
+.company-text {
+  font-size: 0.875rem;
+  color: #525252;
+  line-height: 1.4;
+}
+
+.company-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-content: start;
+}
+
+.company-skills li {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  background: #ffffff;
+  border-radius: 5px;
+  padding: 5px 10px;
+  box-shadow: 1px 1px #1414144f;
+}
+
+@media (max-width: 800px) {
+  .experience {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .experience .subtitle {
+    color: #141414;
+  }
+  .experience-text {
+    font-size: 1.25rem;
+  }
+  .company-year {
+    position: initial;
+    order: 1;
+    width: initial;
+    text-align: left;
+  }
+}
+@media (max-width: 800px) {
+  .subtitle {
+    font-size: 3rem;
+    text-transform: capitalize;
+    max-width: initial;
+  }
+}
+@media (max-width: 400px) {
+  .company {
+    grid-template-columns: 1fr;
+  }
+}
